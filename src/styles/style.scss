@@ -1,0 +1,28 @@
+body {
+  background-color: #161e29;
+  font-family: "Inter", sans-serif;
+  color: whitesmoke;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover {
+    color: purple;
+}
+
+.list {
+    margin-right: 20px;
+}
