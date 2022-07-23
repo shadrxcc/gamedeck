@@ -1,3 +1,10 @@
 import './styles/style.scss';
+import { getGames } from './games';
 
-console.log('hello world');
+getGames();
+
+const actionGames = document.getElementById('Action');
+
+//actionGames.addEventListener('click', () => {
+    //getGames.
+//})
