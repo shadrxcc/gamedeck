@@ -34,3 +34,22 @@ a:hover {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.sci {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+}
+
+.sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
