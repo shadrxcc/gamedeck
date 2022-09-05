@@ -14,9 +14,6 @@ const racingbtn = document.getElementById('racing');
 const racinggames = document.getElementById('category3');
 const sportsbtn = document.getElementById('sports');
 const sportgames = document.getElementById('category4')
-const homebtn = document.getElementById('home');
-
-
 
 
 saction.addEventListener('click', () => {

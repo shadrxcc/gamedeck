@@ -13,7 +13,7 @@ export const showRacingGames = (data) => {
     const featured = data.map(game => {
         return `
         <div class="col-md-3 actgames py-3 m-auto">
-            <div class="card border-danger w-100">
+            <div class="card rounded border-0 w-100">
         <img src="${game.background_image}" class="card-img-top" alt="...">
         <div class="card-body bg">
           <h5 class="card-title">${game.name}</h5>

@@ -1,11 +1,11 @@
 body {
-  background-color: #161e29;
-  font-family: "Inter", sans-serif;
+  background-color: #0b0c0c;
+  font-family: "General Sans", sans-serif;
   color: whitesmoke;
 }
 
 .bg {
-  background-color: #161e29;
+  background-color: #16191f;
 }
 
 header {
@@ -32,24 +32,24 @@ a:hover {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(222, 219, 223, 0.24),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s ease-in-out;
 }
 
-.sci {
-	position: absolute;
-	bottom: 50px;
-	display: flex;
+.card:hover {
+  transform: translateY(20);
 }
 
-.sci li {
-	list-style: none;
-	margin: 0 10px;
-	transform: translateY(40px);
-	transition: 0.5s;
-	opacity: 0;
-}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: 0.5s all;
 
-.card:hover .sci li {
-	transform: translateY(0px);
-	opacity: 1;
 }
