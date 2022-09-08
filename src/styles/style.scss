@@ -43,8 +43,7 @@ a:hover {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(222, 219, 223, 0.24),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(222, 219, 223, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.5s ease-in-out;
 }
 
@@ -66,12 +65,7 @@ a:hover {
   right: 0;
   bottom: 0;
   z-index: 2;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(14, 25, 43, 0.24),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19)
-    ),
-    url("../assets/carl-raw-m3hn2Kn5Bns-unsplash.jpg");
+  background-image: linear-gradient(to bottom, rgba(14, 25, 43, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
   background-size: cover;
   background-repeat: no-repeat;
 }
