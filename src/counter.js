@@ -1,3 +1,3 @@
-export const counter = item => {
-    return  item.length
+export const counter = game => {
+    return  game.length
 };

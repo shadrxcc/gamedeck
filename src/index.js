@@ -55,6 +55,12 @@ close.addEventListener('click', () => {
     location.reload();
 });
 
+const hamburger = document.getElementById('hamburger')
+const navuL = document.getElementById('nav-ul')
+
+hamburger.addEventListener('click', () => {
+    navuL.classList.toggle('show');
+});
 
 
 

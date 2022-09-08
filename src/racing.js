@@ -1,4 +1,5 @@
 import { getDetails } from "./details";
+import { counter } from "./counter";
 
 export const racingGames = () => {
     fetch('https://api.rawg.io/api/games?key=6e3446bcac6d4b9b9e33e75472a09c4f&genres=1').then(function(response){
@@ -13,6 +14,9 @@ export const racingGames = () => {
 
 export const showRacingGames = (data) => {
     const cont = document.getElementById('category3');
+    const gamecount = counter(data)
+    const text = "Racing Games:"
+    cont.innerText = text.concat(" ", ([gamecount]))
    const ul = document.createElement("div");
    ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){
@@ -23,7 +27,7 @@ export const showRacingGames = (data) => {
             <div class="card id='${game.id} rounded border-0 w-100">
         <img src="${game.background_image}" class="card-img-top" alt="...">
         <div class="card-body bg">
-          <h5 class="card-title">${game.name}</h5>
+           <h6 class="card-title">${game.name}</h6>
 
           
         </div>

@@ -13,9 +13,20 @@ header {
   justify-content: space-between;
 }
 
-.nav {
+nav {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 15px;
 }
 
 a {
@@ -34,7 +45,7 @@ a:hover {
 .card {
   box-shadow: 0 4px 8px 0 rgba(222, 219, 223, 0.24),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .card-img-top {
@@ -43,24 +54,6 @@ a:hover {
 
 .card-img {
   height: 30vh;
-}
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  border: 1px solid black;
-  border-radius: 10px;
-  z-index: 10;
-  background-color: white;
-  width: 500px;
-  max-width: 80%;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .overlay {
@@ -73,4 +66,43 @@ a:hover {
   right: 0;
   bottom: 0;
   z-index: 2;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(14, 25, 43, 0.24),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    ),
+    url("../assets/carl-raw-m3hn2Kn5Bns-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hamburger {
+  background-color: transparent;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .van {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hamburger {
+    display: none;
+  }
 }

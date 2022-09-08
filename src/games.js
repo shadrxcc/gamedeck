@@ -14,6 +14,9 @@ export const getGames = () => {
 
 export const displayGames = (data) => {
    const cont = document.getElementById('category');
+   const gamecount = counter(data)
+    const text = "Featured Games:"
+    cont.innerText = text.concat(" ", ([gamecount]))
    const ul = document.createElement("div");
    ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){
@@ -24,7 +27,7 @@ export const displayGames = (data) => {
             <div class="card id='${game.id} rounded border-0 w-100">
         <img src="${game.background_image}" class="card-img-top" alt="...">
         <div class="card-body bg">
-          <h5 class="card-title">${game.name}</h5>
+          <h6 class="card-title">${game.name}</h6>
 
           
         </div>
@@ -42,6 +45,3 @@ export const displayGames = (data) => {
     };
                 cont.appendChild(ul)
 };
-
-/* eslint-enable import/no-cycle, consistent-return */
-

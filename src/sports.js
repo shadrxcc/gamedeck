@@ -23,7 +23,7 @@ export const showSportGames = (data) => {
             <div class="card id='${game.id} rounded border-0 w-100">
         <img src="${game.background_image}" class="card-img-top" alt="...">
         <div class="card-body bg">
-          <h5 class="card-title">${game.name}</h5>
+           <h6 class="card-title">${game.name}</h6>
 
           
         </div>
