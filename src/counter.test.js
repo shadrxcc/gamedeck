@@ -1,4 +1,4 @@
-const counter = require('./counter');
+import { counter } from "./counter";
 
 const games = [{
     id:'1',

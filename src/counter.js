@@ -1,4 +1,3 @@
-function counter(game) {
-  return game.length;
-}
-module.exports = counter;
+export const counter = game => {
+    return  game.length
+};
