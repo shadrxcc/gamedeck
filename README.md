@@ -8,7 +8,7 @@ A game-based web application using an external API that displays some of the mos
 
 ## Live Demo
 
-[Live Demo](https://shadrxcc.github.io/gamedeck/)
+[Live Demo](https://631a68d7231fa91c68c0f086--marvelous-arithmetic-da7874.netlify.app/)
 
 ## Author
 
