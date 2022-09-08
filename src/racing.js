@@ -15,8 +15,10 @@ export const racingGames = () => {
 export const showRacingGames = (data) => {
     const cont = document.getElementById('category3');
     const gamecount = counter(data)
-    const text = "Racing Games:"
-    cont.innerText = text.concat(" ", ([gamecount]))
+   const text = document.createElement('h5');
+   text.classList.add('text-start', 'ps-4')
+   text.innerHTML = "Racing Games:" + " " + "(" + ([gamecount]) + ")"
+   cont.appendChild(text)
    const ul = document.createElement("div");
    ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){

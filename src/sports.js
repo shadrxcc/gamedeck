@@ -1,4 +1,5 @@
 import { getDetails } from "./details";
+import { counter } from "./counter";
 
 export const sportGames = () => {
     fetch('https://api.rawg.io/api/games?key=6e3446bcac6d4b9b9e33e75472a09c4f&genres=15').then(function(response){
@@ -13,6 +14,11 @@ export const sportGames = () => {
 
 export const showSportGames = (data) => {
     const cont = document.getElementById('category4');
+    const gamecount = counter(data)
+   const text = document.createElement('h5');
+   text.classList.add('text-start', 'ps-4')
+   text.innerHTML = "Sport Games:" + " " + "(" + ([gamecount]) + ")"
+   cont.appendChild(text)
    const ul = document.createElement("div");
    ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){

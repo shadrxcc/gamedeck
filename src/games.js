@@ -15,8 +15,10 @@ export const getGames = () => {
 export const displayGames = (data) => {
    const cont = document.getElementById('category');
    const gamecount = counter(data)
-    const text = "Featured Games:"
-    cont.innerText = text.concat(" ", ([gamecount]))
+   const text = document.createElement('h5');
+   text.classList.add('text-start', 'ps-4')
+   text.innerHTML = "Featured Games:" + " " + "(" + ([gamecount]) + ")"
+   cont.appendChild(text)
    const ul = document.createElement("div");
    ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){
@@ -38,8 +40,9 @@ export const displayGames = (data) => {
                     li.innerHTML = row;
                     li.onclick = ()=>{
                             getDetails(game.id)
+                            
                             overlay.style.display = 'block';
-                            down.style.display = 'none';
+                            down.remove();
                     };
                 ul.appendChild(li)
     };

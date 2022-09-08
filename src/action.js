@@ -13,6 +13,11 @@ export const gamesAction = () => {
 
 export const showActionGames = (data) => {
     const cont = document.getElementById('category2');
+    const gamecount = counter(data)
+   const text = document.createElement('h5');
+   text.classList.add('text-start', 'ps-4')
+   text.innerHTML = "Action Games:" + " " + "(" + ([gamecount]) + ")"
+   cont.appendChild(text)
    const ul = document.createElement("div");
    ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){
