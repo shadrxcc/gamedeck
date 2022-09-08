@@ -1,3 +1,5 @@
+import { getDetails } from "./details";
+
 export const racingGames = () => {
     fetch('https://api.rawg.io/api/games?key=6e3446bcac6d4b9b9e33e75472a09c4f&genres=1').then(function(response){
     response.json().then(function(data) {
@@ -10,19 +12,32 @@ export const racingGames = () => {
 }
 
 export const showRacingGames = (data) => {
-    const featured = data.map(game => {
-        return `
-        <div class="col-md-3 actgames py-3 m-auto">
-            <div class="card rounded border-0 w-100">
+    const cont = document.getElementById('category3');
+   const ul = document.createElement("div");
+   ul.classList.add('row', 'mx-auto');
+    for (let i = 0; i < data.length; i++){
+        const game = data[i];
+        const li = document.createElement("div")
+        li.classList.add('col-md-3', 'py-3')
+        const row = `<div>
+            <div class="card id='${game.id} rounded border-0 w-100">
         <img src="${game.background_image}" class="card-img-top" alt="...">
-        <div id="${game.id}" class="card-body bg">
+        <div class="card-body bg">
           <h5 class="card-title">${game.name}</h5>
-        <p>Release Date: ${game.released}</p>
-        <p>Tags: ${game.tags.name}</p>
+
+          
         </div>
         </div>
-        </div>
-        `
-    })
-    document.getElementById('category3').insertAdjacentHTML("afterbegin", featured);
+        </div>`
+                    const overlay = document.getElementById('overlay');
+                    const down = document.getElementById('category3');
+                    li.innerHTML = row;
+                    li.onclick = ()=>{
+                            getDetails(game.id)
+                            overlay.style.display = 'block';
+                            down.style.display = 'none';
+                    };
+                ul.appendChild(li)
+    };
+                cont.appendChild(ul)
 }

@@ -7,9 +7,6 @@ import { getDetails } from './details';
 
 getGames();
 
-
-
-
 const saction = document.getElementById('gaction');
 const actiongames = document.getElementById('category2');
 const tgames = document.querySelector('.actgames');
@@ -50,6 +47,14 @@ sportsbtn.addEventListener('click', () => {
     sportgames.style.display = 'inline-flex';
     sportGames();
 })
+
+const close = document.getElementById('closeUp');
+const overlay = document.getElementById('overlay');
+close.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    location.reload();
+});
+
 
 
 

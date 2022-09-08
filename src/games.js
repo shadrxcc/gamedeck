@@ -15,11 +15,13 @@ export const getGames = () => {
 export const displayGames = (data) => {
    const cont = document.getElementById('category');
    const ul = document.createElement("div");
+   ul.classList.add('row', 'mx-auto');
     for (let i = 0; i < data.length; i++){
         const game = data[i];
         const li = document.createElement("div")
-        const row = `<div class="col-md-3 allgames py-3 m-auto">
-            <div class="card rounded border-0 w-100">
+        li.classList.add('col-md-3', 'py-3')
+        const row = `<div>
+            <div class="card id='${game.id} rounded border-0 w-100">
         <img src="${game.background_image}" class="card-img-top" alt="...">
         <div class="card-body bg">
           <h5 class="card-title">${game.name}</h5>
@@ -29,10 +31,10 @@ export const displayGames = (data) => {
         </div>
         </div>`
                     const overlay = document.getElementById('overlay');
-                    const down = document.getElementById('coinDlist');
+                    const down = document.getElementById('category');
                     li.innerHTML = row;
                     li.onclick = ()=>{
-                            details(item.id)
+                            getDetails(game.id)
                             overlay.style.display = 'block';
                             down.style.display = 'none';
                     };
